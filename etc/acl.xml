@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Shch_Document::Datasheet" title="Datasheet" sortOrder="10">
+					<resource id="Shch_Document::Datasheet_save" title="Save Datasheet" sortOrder="10"/>
+					<resource id="Shch_Document::Datasheet_delete" title="Delete Datasheet" sortOrder="20"/>
+					<resource id="Shch_Document::Datasheet_update" title="Update Datasheet" sortOrder="30"/>
+					<resource id="Shch_Document::Datasheet_view" title="View Datasheet" sortOrder="40"/>
+				</resource>
+				<resource id="Shch_Document::Drawing" title="Drawing" sortOrder="10">
+					<resource id="Shch_Document::Drawing_save" title="Save Drawing" sortOrder="10"/>
+					<resource id="Shch_Document::Drawing_delete" title="Delete Drawing" sortOrder="20"/>
+					<resource id="Shch_Document::Drawing_update" title="Update Drawing" sortOrder="30"/>
+					<resource id="Shch_Document::Drawing_view" title="View Drawing" sortOrder="40"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

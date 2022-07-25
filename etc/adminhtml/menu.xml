@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add id="Shch::document_top_level" title="SHCH" module="Shch_Document" sortOrder="9" resource="Magento_Backend::content"/>
+		<add id="Shch_Document::shch_document_datasheet" title="Datasheets" module="Shch_Document" sortOrder="9999" resource="Magento_Backend::content" parent="Shch::document_top_level" action="shch_document/datasheet/index"/>
+		<add id="Shch_Document::shch_document_drawing" title="Drawings" module="Shch_Document" sortOrder="9999" resource="Magento_Backend::content" parent="Shch::document_top_level" action="shch_document/drawing/index"/>
+	</menu>
+</config>

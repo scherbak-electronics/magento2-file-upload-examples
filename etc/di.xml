@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Shch\Document\Api\DatasheetRepositoryInterface" type="Shch\Document\Model\DatasheetRepository"/>
+	<preference for="Shch\Document\Api\Data\DatasheetInterface" type="Shch\Document\Model\Datasheet"/>
+	<preference for="Shch\Document\Api\Data\DatasheetSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Shch\Document\Model\ResourceModel\Datasheet\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">shch_document_datasheet</argument>
+			<argument name="resourceModel" xsi:type="string">Shch\Document\Model\ResourceModel\Datasheet\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="shch_document_datasheet_listing_data_source" xsi:type="string">Shch\Document\Model\ResourceModel\Datasheet\Grid\Collection</item>
+				<item name="shch_document_drawing_listing_data_source" xsi:type="string">Shch\Document\Model\ResourceModel\Drawing\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<preference for="Shch\Document\Api\DrawingRepositoryInterface" type="Shch\Document\Model\DrawingRepository"/>
+	<preference for="Shch\Document\Api\Data\DrawingInterface" type="Shch\Document\Model\Drawing"/>
+	<preference for="Shch\Document\Api\Data\DrawingSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Shch\Document\Model\ResourceModel\Drawing\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">shch_document_drawing</argument>
+			<argument name="resourceModel" xsi:type="string">Shch\Document\Model\ResourceModel\Drawing\Collection</argument>
+		</arguments>
+	</virtualType>
+</config>
